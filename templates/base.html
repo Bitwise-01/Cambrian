@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.slim.js') }}"></script>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		{% block links %}{% endblock %}
+		<title>{% block title %}{% endblock %}</title>	
+	</head>
+	<body>	
+        {% block content %}
+        {% endblock %}
+	</body>
+</html>
