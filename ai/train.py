@@ -94,10 +94,8 @@ class Model(object):
 		return output_file
 
 
-
 	def save(self):
 		self.model.save(self.output_file)
-
 
 
 

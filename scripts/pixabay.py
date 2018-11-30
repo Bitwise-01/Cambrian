@@ -2,7 +2,6 @@
 # Author: Pure-L0G1C
 # Description: Download images from Pixabay
 
-
 import re 
 from queue import Queue 
 from platform import system

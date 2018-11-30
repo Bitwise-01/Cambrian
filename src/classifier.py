@@ -10,6 +10,7 @@ import tensorflow as tf
 global graph
 graph = tf.get_default_graph() 
 
+
 class Classifier(object):
 	
 

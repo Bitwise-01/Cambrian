@@ -14,6 +14,7 @@ PATH_TO_MODEL = 'ai/trained_models/cat_dog_1.h5'
 
 classifier = Classifier(PATH_TO_MODEL)
 
+
 @app.route('/')
 def index():
     return render_template('index.html')

@@ -1,6 +1,6 @@
 # Date: 11/27/2018
 # Author: Pure-L0G1C
-# Description: Predict using a pre-trained model
+# Description: Predict using a trained model
 
 from numpy import expand_dims
 from keras.models import load_model
