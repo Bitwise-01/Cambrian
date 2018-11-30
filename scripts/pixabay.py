@@ -4,9 +4,9 @@
 
 
 import re 
-from time import time
 from queue import Queue 
 from platform import system
+from time import time, sleep
 from subprocess import Popen
 from argparse import ArgumentParser
 from threading import Thread, RLock
@@ -84,6 +84,7 @@ class Pixabay(object):
         self.set_max_pages()
         Thread(target=self.download_images, daemon=True).start()
         Thread(target=self.collect_images, daemon=True).start()
+        sleep(3)
 
         last_num = 0
         while self.is_alive:

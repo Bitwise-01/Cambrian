@@ -1,16 +1,33 @@
 {% extends "base.html" %} 
 
 		{% block links %}
-		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">
-		<script type="text/javascript" src="{{ url_for('static', filename='js/index.js') }}"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/index.css') }}">    
 		{% endblock %}
-	
-	{% block title %} Main {% endblock %}
 		
+    	{% block title %}Upload an image{% endblock %}	
 		{% block content %}
-        
-        
-        <h1>Index page</h1>
-        
+		
+		<div class="container">
+		    <div class="row">
+		    	<div class="col">
+				    <form action="{{ url_for('upload') }}" method="post" enctype="multipart/form-data">
+				    	<div class="form-group">
+				    		<label>Upload an image of a Cat or a Dog</label>
+					    	<input type="file" class="form-control-file" name="file">
+					    	<div id="message">
+						    	{% with messages = get_flashed_messages() %}
+						    		{% if messages %}
+								    	{% for message in messages %}
+								      		<p>{{ message }}</p>
+								    	{% endfor %}
+								  	{% endif %}
+								{% endwith %}					    		
+					    	</div>					
+					    	<button type="submit" class="btn btn-primary">Predict</button>
+					  	</div>
+					</form>		    		
+		    	</div>
+		    </div>			
+		</div>
 
 		{% endblock %}

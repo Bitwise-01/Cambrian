@@ -3,15 +3,22 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
-		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.slim.js') }}"></script>
         <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/particles.css') }}">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 		{% block links %}{% endblock %}
 		<title>{% block title %}{% endblock %}</title>	
 	</head>
-	<body>	
+	<body id="particles-js">	
         {% block content %}
         {% endblock %}
+        <script type="text/javascript" src="{{ url_for('static', filename='js/particles.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/particle-accelerator.js') }}"></script>
 	</body>
 </html>
+
+
+
+

@@ -1,2 +1,42 @@
 @charset "utf-8";
 
+body {
+	margin: 0;
+	padding: 0;
+}
+
+form {
+	position: relative;
+}
+
+form button {
+	position: absolute;
+	margin-top: 14.5%;
+}
+
+form label {
+	margin: 4%;
+	font-size: 1.3em;
+}
+
+form input {
+	margin-top: 5px;
+	margin-left: 10%;
+}
+
+#message {
+	height: 5px;
+	padding: 6px;
+	padding-top: 10px;
+}
+
+.container {
+  	left: 30%;
+	height: 280px;
+	margin-top: 15%;
+  	text-align: center;
+	position: absolute;
+	border-radius: 2.5px;
+	background-color: #fff;
+	width: 640px !important;
+}
