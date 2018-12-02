@@ -41,7 +41,7 @@ class Model(object):
 		
 
 if __name__ == '__main__':
-	path_to_img = 'dataset/valid/cats/img4.jpg'
+	path_to_img =  'dataset/valid/cats/img4.jpg'
 	path_to_model = 'trained_models/cat_dog_1.h5'
 
 	model = Model(path_to_model, path_to_img)

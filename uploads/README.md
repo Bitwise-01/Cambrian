@@ -1,0 +1,1 @@
+This directory is used as a temporary storage for images uploaded
