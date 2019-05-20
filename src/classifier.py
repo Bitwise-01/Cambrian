@@ -39,4 +39,4 @@ class Classifier(object):
 
             cat, dog = int(output[0]), int(output[1])
 
-            return {'name': 'Cat', 'conf': confs_cat} if cat else {'name': 'Dog', 'conf': confs_dog}
+            return {'name': 'Cat', 'conf': confs_cat} if cat > dog else {'name': 'Dog', 'conf': confs_dog}

@@ -49,8 +49,8 @@ class Model(object):
         self.model.add(Dropout(0.25))
 
         self.model.add(Flatten())
-        self.model.add(Dense(512, activation='relu'))
-        self.model.add(Dropout(0.5))
+        self.model.add(Dense(128, activation='relu'))
+        self.model.add(Dropout(0.25))
         self.model.add(Dense(total_classes, activation='softmax'))
 
     def compile(self):

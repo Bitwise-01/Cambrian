@@ -80,8 +80,8 @@ class RemoveDuplicates:
 
 
 if __name__ == '__main__':
-    trainset_dir = '../ai/dataset/train/dogs/'
-    validset_dir = '../ai/dataset/valid/dogs/'
+    trainset_dir = '../ai/dataset/train/cats/'
+    validset_dir = '../ai/dataset/valid/cats/'
 
     remove_duplicates = RemoveDuplicates(trainset_dir, validset_dir)
     remove_duplicates.start()

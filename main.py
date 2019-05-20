@@ -10,7 +10,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['SECRET_KEY'] = os.urandom(0x200)
 ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg'])
-PATH_TO_MODEL = 'ai/trained_models/cat_dog_1.h5'
+PATH_TO_MODEL = 'ai/trained_models/cat_dog_3.h5'
 
 classifier = Classifier(PATH_TO_MODEL)
 
