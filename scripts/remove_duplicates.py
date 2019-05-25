@@ -23,7 +23,7 @@ class RemoveDuplicates:
         try:
             return str(imagehash.dhash(Image.open(img)))
         except:
-            print('[!] Failed to remove: {}'.format(img))
+            print('[!] Failed to hash: {}'.format(img))
 
     def set_train_data(self):
         print('\nSetting training data ...')
