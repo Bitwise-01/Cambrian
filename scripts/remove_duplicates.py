@@ -20,7 +20,10 @@ class RemoveDuplicates:
         self.duplicates_remove = 0
 
     def get_fingerprint(self, img):
-        return str(imagehash.dhash(Image.open(img)))
+        try:
+            return str(imagehash.dhash(Image.open(img)))
+        except:
+            print('[!] Failed to remove: {}'.format(img))
 
     def set_train_data(self):
         print('\nSetting training data ...')
@@ -29,6 +32,9 @@ class RemoveDuplicates:
             for filename in files:
                 img = os.path.join(root, filename)
                 fingerprint = self.get_fingerprint(img)
+                
+                if not fingerprint:
+                    continue
 
                 if fingerprint in self.trainset_data:
                     self.duplicates_remove += 1
