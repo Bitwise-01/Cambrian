@@ -3,7 +3,8 @@
 # Description: Remove duplicates
 
 import os
-import hashlib
+import imagehash
+from PIL import Image
 from threading import Thread
 
 
@@ -19,10 +20,7 @@ class RemoveDuplicates:
         self.duplicates_remove = 0
 
     def get_fingerprint(self, img):
-        with open(img, 'rb') as f:
-            content = f.read()
-
-        return hashlib.sha256(content).hexdigest()
+        return str(imagehash.dhash(Image.open(img)))
 
     def set_train_data(self):
         print('\nSetting training data ...')
