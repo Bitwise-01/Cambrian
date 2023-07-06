@@ -6,7 +6,7 @@ Keras-Applications>=1.0.6
 Keras-Preprocessing>=1.0.5
 numpy>=1.16.3
 requests>=2.20.1
-scipy==1.1.0
+scipy==1.10.0
 Pillow>=6.0.0
 ImageHash>=4.0
 tensorflow>=1.13.1
